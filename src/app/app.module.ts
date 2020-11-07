@@ -7,11 +7,20 @@ import { AtaqueComponent } from './pages/ataque/ataque.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { SharedModule } from './shared/shared.module';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterModule, Routes } from '@angular/router';
+import { Router, RouterModule, Routes, } from '@angular/router';
 
 const appRoutes: Routes = [
   {
     path: "", component: HomeComponent
+  },
+  {
+    path: "ataque", component: AtaqueComponent
+  },
+  {
+    path: "cadastro", component: CadastroComponent
+  },
+  {
+    path: "**", redirectTo: ""
   },
 ];
 
@@ -27,7 +36,7 @@ const appRoutes: Routes = [
     BrowserModule,
     SharedModule,
     FormsModule,
-    RouterModule[appRoutes],
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
