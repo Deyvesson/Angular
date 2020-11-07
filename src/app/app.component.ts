@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'projeto2';
+  name = "";
+  raca = "";
+  classe = "";
+  nivel = "";
+  telefone = "";
+
+  getEvent(event, campo: string){
+    if(campo === "nome"){ this.name = event.target.value}
+    else if(campo === "raca"){this.raca = event.target.value}
+    else if(campo === "classe"){this.classe = event.target.value}
+    else if(campo === "nivel"){this.nivel = event.target.value}
+    else if(campo === "telefone"){this.telefone = event.target.value}
+  }
 }
