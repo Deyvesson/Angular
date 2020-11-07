@@ -12,6 +12,12 @@ export class AppComponent {
   nivel = "";
   telefone = "";
 
+  private _isHidden = "teste";
+
+  get isHidden(){
+    return this._isHidden;
+  }
+
   getEvent(event, campo: string){
     if(campo === "nome"){ this.name = event.target.value}
     else if(campo === "raca"){this.raca = event.target.value}
