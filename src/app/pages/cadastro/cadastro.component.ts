@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor() { }
+  name = "";
+  raca = "";
+  classe = "";
+  nivel = "";
+  telefone = "";
+
+  cadastrar(cadastro: NgForm){
+    if(cadastro.invalid){
+      window.alert('Campos inválidos')
+    }
+  }
 
   ngOnInit(): void {
   }

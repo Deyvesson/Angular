@@ -6,19 +6,28 @@ import { HomeComponent } from './pages/home/home.component';
 import { AtaqueComponent } from './pages/ataque/ataque.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { SharedModule } from './shared/shared.module';
+import { FormsModule } from '@angular/forms';
+import { Router, RouterModule, Routes } from '@angular/router';
 
+const appRoutes: Routes = [
+  {
+    path: "", component: HomeComponent
+  },
+];
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    CadastroComponent,
     AtaqueComponent,
-    CadastroComponent
   ],
   imports: [
     BrowserModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    RouterModule[appRoutes],
   ],
   providers: [],
   bootstrap: [AppComponent]

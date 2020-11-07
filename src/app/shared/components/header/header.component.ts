@@ -11,15 +11,9 @@ export class HeaderComponent implements OnInit {
   disable1 = true;
   disable2 = true;
   disable3 = true;
-  ataque = 0;
+  
 
-  favoritar(index: number){
-    this.listagem[index].favorito = !this.listagem[index].favorito
-  }
-
-  atacar(){
-      this.ataque = Math.floor(Math.random() * 21);
-  }
+  
 
   listagem: Array<ListagemDD> = [
     {

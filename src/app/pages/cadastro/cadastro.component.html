@@ -1,1 +1,23 @@
-<p>cadastro works!</p>
+<form action="" #cadastro="ngForm">
+    <div class="mdl-textfield mdl-js-textfield">
+      <h4>Nome:</h4><input class="mdl-textfield__input" #nome="ngModel" type="text" name="nome" [(ngModel)]="name" required>
+      <p *ngIf="nome.invalid === true">campo {{nome.name}} é obrigatório</p>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <h4>Raça:</h4><input class="mdl-textfield__input" #Craca="ngModel" type="text" name="raca" [(ngModel)]="raca" required>
+      <p *ngIf="Craca.invalid === true">campo {{Craca.name}} é obrigatório</p>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <h4>Classe:</h4><input class="mdl-textfield__input" #Cclasse="ngModel" type="text" name="classe" [(ngModel)]="classe" required>
+      <p *ngIf="Cclasse.invalid === true">campo {{Cclasse.name}} é obrigatório</p>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <h4>Nível:</h4><input class="mdl-textfield__input" #Cnivel="ngModel" type="text" name="nivel" [(ngModel)]="nivel" required>
+      <p *ngIf="Cnivel.invalid === true">campo {{Cnivel.name}} é obrigatório</p>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <h4>Telefone do jogador:</h4><input class="mdl-textfield__input" #Ctelefone="ngModel" type="text" name="telefone" [(ngModel)]="telefone" required>
+      <p *ngIf="Ctelefone.invalid === true">campo {{Ctelefone.name}} é obrigatório</p>
+    </div>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" [disabled]="cadastro.invalid" type="submit" (click)="cadastrar(cadastro)">Salvar</button>
+  </form>

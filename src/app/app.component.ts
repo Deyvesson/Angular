@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -25,4 +26,6 @@ export class AppComponent {
     else if(campo === "nivel"){this.nivel = event.target.value}
     else if(campo === "telefone"){this.telefone = event.target.value}
   }
+
+  
 }

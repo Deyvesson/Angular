@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListagemDD } from 'src/app/core/interfaces/listagem.interface';
 
 @Component({
   selector: 'app-ataque',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ataque.component.css']
 })
 export class AtaqueComponent implements OnInit {
+  ataque = 0;
+  atacar(){
+    this.ataque = Math.floor(Math.random() * 21);
+  } 
 
-  constructor() { }
 
   ngOnInit(): void {
   }

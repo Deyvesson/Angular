@@ -1,1 +1,16 @@
-<p>home works!</p>
+<style>
+    .demo-list-action {
+      width: 100%;
+    }
+    </style>
+
+<div class="demo-list-action mdl-list">
+    <div class="mdl-list__item" *ngFor="let lista of listagem; let i = index">
+      <span class="mdl-list__item-primary-content">
+        <i class="material-icons mdl-list__item-avatar">person</i>
+        <span>{{lista.classe}}: </span>
+        <span>{{lista.descricao}}</span>
+      </span>
+      <!--<h6 [ngClass]="{'disable': !lista.favorito}">Favoritado</h6>-->
+      <a class="mdl-list__item-secondary-action" href="#" (click)="favoritar(i)"><i class="material-icons" [ngClass]="{'cor': lista.favorito}" >star</i></a>
+</div>
